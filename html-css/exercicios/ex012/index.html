@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        video {
+            width: 500px;
+        }
+    </style>
+    <style>
+        iframe{
+            width: 500px;
+        }
+    </style>
+    <title>Vídeo em HTML</title>
+</head>
+<body>
+    <h1>Inserindo videos hospedados localmente</h1>
+    <video controls>
+        <source src="midia/meuvideo.webm" type="video/webm">
+        <source src="midia/meuvideo.m4v" type="video/mp4">
+        <source src="midia/meuvideo.mp4" type="video/mp4">
+        <p>seu navegador é uma bosta, baixa <a href="midia/meuvideo.mp4">aqui</a></p>
+    </video>
+    <h1>Inserindo videos do youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gCRzng7LsQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TBtizNDPgkM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Redimensione a tela do navegador</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/pequena.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/media.png" type="image/png">
+        <img src="imagens/grande.png" alt="">
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+        <p>Vamos reproduzir audio em mp3:</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midias/silent_partner.mp3" type="audio/mpeg">
+        <p>Seu navegador é uma bosta, baixa o audio <a href="midias/silent_partner.mp3">aqui</a></p>
+    </audio>
+</body>
+</html>

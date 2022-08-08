@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando posição de background</title>
+    <style>
+        div.quadrado{
+            height: 200px;
+            border-radius: 10px;
+            border: 1px solid;
+            margin: 5px;
+            background-image: url(imagens/wallpaper003.jpg);
+        }
+        div#supesq{
+            background-position:top right;
+        }
+        div#centroesq{
+            background-position:center left;
+        }
+        div#cc{
+            background-position:center center;
+        }
+        div#infesq{
+            background-position:bottom left;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado" id="supesq"></div>
+    <div class="quadrado" id="centroesq"></div>
+    <div class="quadrado" id="cc"></div>
+    <div class="quadrado" id="infesq"></div>
+</body>
+</html>

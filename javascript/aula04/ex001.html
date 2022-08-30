@@ -18,7 +18,9 @@
 <script>
     window.alert('Vai na manha, meu filho!');
     window.confirm('Está gostando de JS?');
-    window.prompt('Qual é o seu nome?');
+   var nome = window.prompt('Qual é o seu nome?');
+   document.write(`Olá, ${nome}, seu nome tem ${nome.length} letras.`);
+   
 </script>
 </body>
 </html>

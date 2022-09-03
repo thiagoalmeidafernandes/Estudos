@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
+
 body {
     background-color: rgb(70, 142, 236);
     font: normal 15pt arial;
+    margin: 0px;
 }
 
 header {
@@ -14,9 +16,20 @@ section {
     background: white;
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
+    max-width: 500px;
+    min-width: 250px;
     margin: auto;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.352);
+}
+
+div {
+    text-align: center;
+}
+
+img {
+    max-width: 250px;
+    margin-top: 10px;
+
 }
 
 footer {

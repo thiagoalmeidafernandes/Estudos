@@ -1,37 +1,21 @@
-var body = window.document.querySelector('body')
-body.addEventListener('load', carregar())
+function tabuada(){
+    let vazio = document.getElementById('stgnumber');//só para verificar se o campo está vazio
+    let num = Number(document.getElementById('stgnumber').value);//Pega o valor do elemento de id="stgnumber" e transforma em número (pois antes era string)
+    let tab = document.getElementById('seltab');//Campo onde vai aparecer a tabuada
 
-function carregar(){
-    var msg = window.document.querySelector('div#msg')
-    var img = window.document.querySelector('img#imagem')
-    var data = new Date()
-    var hora = data.getHours()
-    var mins = data.getMinutes()
-    var secs = data.getSeconds()
-    
-    
-    if (hora < 4) {
-        //Boa madrugada
-        img.src = 'imagens/madrugada.png'
-        document.body.style.background = '#0c1927'
-        msg.innerHTML = `Boa Agora são ${hora} horas e ${mins} minutos.<br>Boa madrugada!`
-        
-    } else if (hora < 12) {
-        //Bom dia
-        img.src = 'imagens/dia.png'
-        document.body.style.background = '#4693c9'
-        msg.innerHTML = `Agora são ${hora} horas e ${mins} minutos<br>Bom dia!.`
-
-    } else if (hora < 18) {
-        //Boa tarde
-        img.src = 'imagens/tarde.png'
-        document.body.style.background = '#f6b18f'
-        msg.innerHTML = `Agora são ${hora} horas e ${mins} minutos.Boa Tarde!<br>`
-
+    if (vazio.value.length == 0){//variavel de nome vazio
+        window.alert(`Por favor, digite um número.`);
     } else {
-        //Boa noite
-        img.src = 'imagens/noite.png'
-        document.body.style.background = '#234272'
-        msg.innerHTML = `Agora são ${hora} horas e ${mins} minutos.<br>Boa noite!<br>`
-    }
+        let c = 1;
+        tab.innerHTML = ''//limpa o elemento com id='tab'(select)
+        tab.setAttribute('size', '10');//Cria um atributo size no elemento select de valor 10
+        while (c <= 10) {
+            let option = document.createElement('option');//Cria no documento um elemento option, mas não define onde
+            option.text = `${num} x ${c} = ${num*c}`;
+            option.value = `tab${c}`;//Saber qual foi o item que foi selecionado - não faz sentido no momento
+            tab.appendChild(option);//Define que option vai ser filho do elemento com id="tab"(select)
+            c++;//Incrementa o contador
+
+        }
+    }  
 }
